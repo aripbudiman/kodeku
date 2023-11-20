@@ -78,7 +78,10 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('user.name')->label('penulis'),
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\ToggleColumn::make('draft')
+                ->label('Draf'),
                 Tables\Columns\ImageColumn::make('thumbnail')->disk(config('filesystems.default')),
             ])
             ->filters([

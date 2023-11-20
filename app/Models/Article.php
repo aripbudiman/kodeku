@@ -29,7 +29,7 @@ class Article extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'author_id','id');
     }
 
     public function views(): HasMany
