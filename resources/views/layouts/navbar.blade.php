@@ -1,4 +1,4 @@
-<div class="navbar bg-neutral dark:bg-gray-800 sticky top-0 z-50">
+<div class="navbar bg-neutral dark:bg-gray-800 top-0 z-50">
     <div class="navbar-start xs:justify-between xs:flex">
         <div class="dropdown ">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
