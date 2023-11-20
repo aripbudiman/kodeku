@@ -23,15 +23,15 @@
     <div class="card card-compact w-full bg-base-100 shadow-xl">
         <figure><img src="{{ Storage::url($item->thumbnail) }}" alt="Shoes" /></figure>
         <div class="card-body">
-            <a href=""
+            <a href="{{ route('single-article', $item->slug) }}"
                 class="card-title text-neutral hover:text-secondary hover:scale-105 hover:duration-300">{{ \Illuminate\Support\Str::limit($item->title,25) }}</a>
-            <p>{{ $item->content }}</p>
+            <p>{{ \Illuminate\Support\Str::limit($item->content,75) }}</p>
             <div class="card-actions justify-between items-center">
                 <div class="flex items-center gap-x-1">
                     <img src="{{ Storage::url($item->user->avatar)  }}" alt="profile" class="w-5 h-5 rounded-full">
                     <a class="text-md first-letter:uppercase font-medium" href="">{{ $item->user->name }}</a>
                 </div>
-                <button class="btn btn-xs btn-primary">Read More</button>
+                <a href="{{ route('single-article', $item->slug) }}" class="btn btn-xs btn-primary">Read More</a>
             </div>
         </div>
     </div>

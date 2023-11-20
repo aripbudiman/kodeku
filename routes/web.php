@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\HomePage;
 use App\Livewire\Topic\Topic;
+use App\Livewire\Artikel\SingleArticle;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,4 @@ use App\Livewire\Topic\Topic;
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/topic', Topic::class)->name('topic');
+Route::get('/artikel/{slug}', SingleArticle::class)->name('single-article');
