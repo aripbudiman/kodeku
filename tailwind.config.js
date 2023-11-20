@@ -7,4 +7,12 @@ export default {
         './resources/views/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
     ],
+    theme: {
+        extend: {
+            fontFamily: {
+                'righteous': ['Righteous', 'cursive'],
+            },
+        },
+    },
+    plugins: [require("daisyui")]
 }

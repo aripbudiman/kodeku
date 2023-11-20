@@ -13,4 +13,4 @@ use App\Livewire\HomePage;
 |
 */
 
-Route::get('/', HomePage::class)->name('home-page');
+Route::get('/', HomePage::class)->name('home-page')->middleware('auth');

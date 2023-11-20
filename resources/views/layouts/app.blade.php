@@ -16,9 +16,12 @@
 </head>
 
 <body>
-    <main>
-        @yield('content')
-    </main>
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        @include('layouts.navbar')
+        <main class="container mx-auto xl:max-w-5xl">
+            @yield('content')
+        </main>
+    </div>
     @stack('scripts')
 </body>
 
