@@ -12,6 +12,9 @@ export default {
             fontFamily: {
                 'righteous': ['Righteous', 'cursive'],
             },
+            colors: {
+                'pink':'#ff7ac6'
+            }
         },
     },
     plugins: [require("daisyui")]

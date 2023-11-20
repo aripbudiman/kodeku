@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\HomePage;
+use App\Livewire\Topic\Topic;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +14,5 @@ use App\Livewire\HomePage;
 |
 */
 
-Route::get('/', HomePage::class)->name('home-page')->middleware('auth');
+Route::get('/', HomePage::class)->name('home-page');
+Route::get('/topic', Topic::class)->name('topic');

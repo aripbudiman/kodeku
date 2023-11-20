@@ -68,7 +68,7 @@ class TopicResource extends Resource
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\ImageColumn::make('icon')->disk(config('filesystems.default')),
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('description')->limit(20),
             ])
             ->filters([
                 //

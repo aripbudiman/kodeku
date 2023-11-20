@@ -13,6 +13,6 @@ class Topic extends Model
 
     public function articles(): BelongsToMany
     {
-        return $this->morphToMany(Article::class, 'topicables');
+        return $this->morphedByMany(Article::class, 'topicable','topicables','topic_id','topicable_id');
     }
 }

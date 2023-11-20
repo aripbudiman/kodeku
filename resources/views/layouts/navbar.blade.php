@@ -18,9 +18,10 @@
             Koding</a>
     </div>
     <div class="navbar-center hidden lg:flex">
-        <ul class="menu  text-white menu-horizontal px-1">
-            <li><a>Article</a></li>
-            <li><a>Topics</a></li>
+        <ul class="menu text-white menu-horizontal px-1">
+            <li><a class="hover:text-pink"><i class="fa-regular fa-newspaper"></i> Article</a></li>
+            <li><a class="hover:text-pink" href="{{ route('topic') }}"><i class="fa-solid fa-tags"></i> Topics</a>
+            </li>
         </ul>
     </div>
     <div class="navbar-end xl:inline-flex hidden">
