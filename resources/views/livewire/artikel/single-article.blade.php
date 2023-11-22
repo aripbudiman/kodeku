@@ -88,6 +88,13 @@
         font-size: 15px;
     }
 
+    article p code {
+        color: #111827;
+        background-color: #d1d5db;
+        border-radius: 3px;
+        padding: 1.5px;
+    }
+
 </style>
 @endpush
 @push('scripts')
@@ -140,11 +147,13 @@
             });
         });
     });
+    const hidden = document.querySelector('article div p:last-child')
+    hidden.textContent = ''
 
 </script>
 @endpush
 @section('content')
-<div class="pt-16">
+<div class="pt-16 ">
     <div></div>
     <article class="w-full xl:max-w-2xl mx-auto">
         <h1 class="text-3xl font-bold">Daftar Isi:</h1>
