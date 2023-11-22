@@ -1,13 +1,11 @@
-@extends('layouts.app')
 @push('style')
-@livewireStyles
 <style>
     pre {
         padding: 1em;
         margin: 1em 0;
         background-color: #f4f4f4;
         border: 1px solid #ddd;
-        border-radius: 4px;
+        border-radius: 20px;
         overflow: auto;
         font-size: 0.8em;
         line-height: 1.5;
@@ -16,13 +14,13 @@
 
     article {
         font-size: 18px;
+        padding: 0 20px;
         @apply font-sans;
     }
 
     ul.table-of-contents {
         list-style-type: disc;
         margin-left: 20px;
-        margin-top: 5px;
         margin-bottom: 28px;
     }
 
@@ -98,7 +96,6 @@
 </style>
 @endpush
 @push('scripts')
-@livewireScripts
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var preElements = document.querySelectorAll('pre');
@@ -152,15 +149,14 @@
 
 </script>
 @endpush
-@section('content')
 <div class="pt-16 ">
+
     <div></div>
     <article class="w-full xl:max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold">Daftar Isi:</h1>
+        <h1 class="text-3xl font-bold mb-7">Daftar Isi:</h1>
         <x-markdown>
             {!! $article->content !!}</>
         </x-markdown>
     </article>
     <div></div>
 </div>
-@endsection

@@ -22,8 +22,9 @@
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         @include('layouts.navbar')
         <main class="container mx-auto xl:max-w-8xl">
-            @yield('content')
+            {{ $slot }}
         </main>
+        @include('layouts.footer')
     </div>
     @stack('scripts')
 </body>

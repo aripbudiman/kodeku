@@ -1,11 +1,9 @@
-@extends('layouts.app')
 @push('style')
 @livewireStyles
 @endpush
 @push('scripts')
 @livewireScripts
 @endpush
-@section('content')
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 m-5">
     @foreach ($topics as $item)
     <div class="card text-center gap-y-3">
@@ -16,4 +14,3 @@
     </div>
     @endforeach
 </div>
-@endsection

@@ -1,24 +1,26 @@
 <?php
 
-namespace App\Livewire;
-use App\Models\Article;
+namespace App\Livewire\Artikel;
+
 use Livewire\Component;
 
-class HomePage extends Component
+class ListArticle extends Component
 {
     public $data;
     public $keyword='';
     public $count=0;
     public function mount()
     {
-        $this->data = \App\Models\Article::with('topics','user')->latest('published')
-        ->published()
-        ->get(); 
+        $this->data = \App\Models\Article::with('topics')->get(); 
     }
     public function render()
     {
-        return view('livewire.home-page',['articles' => $this->filterData()]);
+        // dd($this->data->toArray());
+        return view('livewire.artikel.list-article',[
+            'articles' => $this->filterData()
+        ]);
     }
+
 
     public function filterData()
     {
