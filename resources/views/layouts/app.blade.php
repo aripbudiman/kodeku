@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="" style="scroll-padding-top: 5rem; scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
@@ -20,11 +20,16 @@
 
 <body>
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+
+        @if (url()->current() !== route('login'))
         @include('layouts.navbar')
-        <main class="container mx-auto xl:max-w-8xl">
+        @endif
+        <main class="container mx-auto xl:max-w-full">
             {{ $slot }}
         </main>
+        @if (url()->current() !== route('login'))
         @include('layouts.footer')
+        @endif
     </div>
     @stack('scripts')
 </body>

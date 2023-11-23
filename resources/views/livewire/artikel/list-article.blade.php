@@ -7,17 +7,25 @@
     </div>
     <div class="grid gap-y-5">
         @foreach ($articles as $item)
-        <a class="card sm:card-side hover:bg-slate-200 transition-colors sm:max-w-none" href="">
+        <a class="card sm:card-side dark:bg-base-300 hover:bg-slate-200 transition-colors sm:max-w-none" href="">
             <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
                 <img loading="lazy" src="{{ Storage::url($item->thumbnail) }}"
                     class="border-base-content bg-base-300 rounded-btn border border-opacity-5" alt="{{ $item->title }}"
                     style="view-transition-name: besttailwindcsspluginsfordevelopers-img">
             </figure>
             <div class="card-body" style="view-transition-name: besttailwindcsspluginsfordevelopers-text">
-                <h2 class="card-title">{{ $item->title }}</h2>
+                <h2 class="card-title dark:text-white">{{ $item->title }}</h2>
                 <p class="text-sm opacity-60">{!! \Illuminate\Support\Str::limit($item->content, 160) !!}</p>
             </div>
         </a>
         @endforeach
     </div>
 </div>
+@push('style')
+<style>
+    [data-theme='dark'].card-title {
+        @apply text-white bg-white
+    }
+
+</style>
+@endpush

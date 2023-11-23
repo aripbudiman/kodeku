@@ -96,6 +96,7 @@
 </style>
 @endpush
 @push('scripts')
+<script id="dsq-count-scr" src="//pandakoding-com.disqus.com/count.js" async></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var preElements = document.querySelectorAll('pre');
@@ -157,6 +158,19 @@
         <x-markdown>
             {!! $article->content !!}</>
         </x-markdown>
+        <div id="disqus_thread"></div>
+        <script>
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://pandakoding-com.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
     </article>
     <div></div>
 </div>
