@@ -1,0 +1,18 @@
+[data-theme='dark'] .card-title {
+    @apply text-gray-100
+}
+[data-theme='dark'] .card {
+    @apply bg-neutral-800
+}
+[data-theme='dark'] .list-card{
+    @apply bg-gray-50 hover:bg-base-100
+}
+[data-theme='dark'] .card .card-title:hover {
+    @apply text-[#1ad1a5]
+}
+[data-theme='dark'] .card .card-body .btn {
+    @apply bg-[#1ad1a5] border-[#1ad1a5]
+}
+[data-theme='dark'] .footer {
+    @apply text-slate-400 
+}

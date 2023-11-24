@@ -15,7 +15,6 @@
     article {
         font-size: 18px;
         padding: 0 20px;
-        @apply font-sans;
     }
 
     ul.table-of-contents {
@@ -68,7 +67,6 @@
     }
 
     .copy-button {
-        /* background-color: #ff7ac6; */
         padding: 4px 7px;
         border-radius: 20px;
         font-size: 10px;
