@@ -15,7 +15,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 m-5">
         @foreach ($articles as $item)
         <div class="card card-compact w-full bg-base-100 shadow-xl">
-            <figure><img src="{{ Storage::url($item->thumbnail) }}" alt="Shoes" /></figure>
+            <figure><img class="h-56" src="{{ Storage::url($item->thumbnail) }}" alt="Shoes" />
+            </figure>
             <div class="card-body">
                 <a href="{{ route('single-article', $item->slug) }}"
                     class="card-title text-neutral hover:text-secondary hover:scale-105 hover:duration-300">{{ \Illuminate\Support\Str::limit($item->title,25) }}</a>

@@ -23,8 +23,7 @@
 </head>
 
 <body>
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col  justify-between">
         @if (url()->current() !== route('login'))
         @include('layouts.navbar')
         @endif

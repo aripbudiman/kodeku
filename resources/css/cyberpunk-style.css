@@ -12,7 +12,7 @@
 @apply bg-slate-900 text-slate-50 border-slate-950
 }
 [data-theme='cyberpunk']  .footer{
-    @apply text-slate-100
+    @apply text-slate-100 bg-[#161402]
 }
 [data-theme='cyberpunk'] .btn-theme{
     @apply bg-[var(--cyberpunk-color)] border-[var(--cyberpunk-color)]

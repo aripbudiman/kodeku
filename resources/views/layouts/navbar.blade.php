@@ -50,7 +50,11 @@
                 <li>
                     <a class="justify-between">
                         Profile
-                        <span class="badge">New</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('myarticle.index') }}" class="justify-between">
+                        MyArticle
                     </a>
                 </li>
                 <li><a>Settings</a></li>
@@ -58,7 +62,7 @@
             </ul>
         </div>
         @else
-        <a href="{{ route('login') }}" class="btn">Login</a>
+        <a href="{{ route('login') }}" class="btn btn-sm">Login</a>
         @endif
 
     </div>
