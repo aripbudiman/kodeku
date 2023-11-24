@@ -76,6 +76,7 @@ class ArticleResource extends Resource
 
     public static function table(Table $table): Table
     {
+        // var_dump(auth()->user()->role);
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')->label('penulis'),
@@ -89,6 +90,7 @@ class ArticleResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
