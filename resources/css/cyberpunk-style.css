@@ -5,9 +5,7 @@
 [data-theme='cyberpunk'] .card-title {
     @apply text-gray-100
 }
-[data-theme='cyberpunk'] .card-title:hover {
-    @apply text-stone-950
-}
+
 [data-theme='cyberpunk'] .card .card-body .btn{
 @apply bg-slate-900 text-slate-50 border-slate-950
 }
@@ -18,7 +16,7 @@
     @apply bg-[var(--cyberpunk-color)] border-[var(--cyberpunk-color)]
 }
 [data-theme='cyberpunk'] .btn-theme:hover{
-    @apply bg-[#fff348e4] border-[#FFF248]
+    @apply bg-[#fff348e4] border-[#FFF248] 
 }
 [data-theme='cyberpunk'] .navbar{
     @apply bg-[#161402] border-[#161402]
@@ -31,4 +29,19 @@
 }
 [data-theme="cyberpunk"] .btn-cari:hover{
     @apply bg-[#161402] text-[#fff348e3] border-[#161402]
+}
+[data-theme="cyberpunk"] .dropdown .menu{
+    @apply bg-[#161402] text-[#FFF248]
+}
+[data-theme="cyberpunk"] .dropdown .menu a{
+    @apply  hover:text-[#fff3488d]
+}
+[data-theme="cyberpunk"] details summary{
+    @apply text-[#FFF248] ml-4
+}
+[data-theme="cyberpunk"] details summary:hover{
+    @apply text-[#FFF248] hover:text-[#fff3488d]
+}
+[data-theme="cyberpunk"] details summary ul{
+    @apply text-[#FFF248] ml-4
 }

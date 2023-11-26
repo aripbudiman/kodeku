@@ -1,5 +1,4 @@
 import preset from './vendor/filament/support/tailwind.config.preset'
-
 export default {
     presets: [preset],
     content: [
@@ -9,11 +8,17 @@ export default {
     ],
     theme: {
         extend: {
+            screens: {
+                
+            },
             fontFamily: {
-                'righteous': ['Righteous', 'cursive'],
+                'righteous': ['Righteous', 'sans'],
+                scandia: ['Scandia Line', 'sans'],
+                Quicksand: ['Quicksand', 'sans'],
             },
             colors: {
-                'pink':'#ff7ac6'
+                'pink':'#ff7ac6',
+                'hijau':'#3dd9b2'
             },
         },
     },

@@ -9,7 +9,7 @@
     <div class="w-full mx-auto flex relative justify-center items-center my-8 max-w-xs md:max-w-lg lg:my-14">
         <i class="fa-solid fa-magnifying-glass absolute left-3 text-gray-700"></i>
         <button class="btn btn-cari btn-sm btn-secondary absolute right-2">Cari</button>
-        <input type="text" wire:model.live.debounce.1000="keyword" placeholder="Cari apa saja di panda  koding"
+        <input type="text" wire:model.live.debounce.1000="keyword" placeholder="Search..."
             class="input input-bordered pl-9 w-full max-w-xl" />
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 m-5">

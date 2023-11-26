@@ -1,0 +1,31 @@
+[data-theme='sunset'] .card-title {
+    @apply text-gray-100 hover:text-hijau
+}
+
+[data-theme='sunset'] .card .card-body .btn{
+    @apply bg-hijau text-slate-800 border-hijau hover:bg-hijau/80
+}
+
+[data-theme='sunset']  .footer{
+    @apply text-slate-400 
+}
+
+[data-theme='sunset'] .btn-theme{
+    @apply bg-hijau border-hijau hover:bg-hijau/80 hover:border-hijau
+}
+
+[data-theme="sunset"] .navbar-center ul li a{
+    @apply text-slate-400 hover:text-hijau
+}
+
+[data-theme="sunset"] .btn-cari{
+    @apply bg-hijau text-slate-900 border-hijau hover:bg-hijau/90 hover:border-hijau
+}
+
+[data-theme="sunset"] #logo{
+    @apply text-slate-400 bg-transparent hover:text-hijau border-transparent
+}
+
+[data-theme="sunset"] .btn-login{
+    @apply bg-hijau text-slate-900 border-hijau hover:bg-hijau/90 hover:border-hijau
+}

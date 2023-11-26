@@ -1,0 +1,102 @@
+
+
+article{
+    @apply px-5 pb-16 font-Quicksand
+}
+
+ul.table-of-contents {
+    @apply list-disc list-inside mb-10;
+}
+ul li::marker {
+    @apply text-red-500 text-xl;
+    content: '#'
+}
+[data-theme="sunset"] ul li::marker {
+    @apply text-pink text-xl;
+    content: '#'
+}
+[data-theme="dark"] ul li::marker {
+    @apply text-hijau;
+    content: '#'
+}
+ul.table-of-contents li a{
+    @apply text-lg font-medium text-slate-800 pl-2 hover:underline hover:text-slate-800
+}
+[data-theme="sunset"] ul.table-of-contents li a{
+    @apply text-lg font-medium text-slate-400 pl-2 hover:underline hover:text-slate-300
+}
+[data-theme="dark"] ul.table-of-contents li a{
+    @apply text-slate-300
+}
+
+article h2 .space-x-2 {
+    @apply text-2xl text-red-500 opacity-60 mr-2
+}
+
+[data-theme="sunset"] article h2 .space-x-2 {
+    @apply text-2xl text-pink opacity-60 mr-2
+}
+
+[data-theme="dark"] article h2 .space-x-2{
+    @apply text-hijau
+}
+
+article h2 {
+    @apply text-2xl font-semibold font-Quicksand mb-2 text-slate-800
+}
+
+[data-theme="sunset"] article h2 {
+    @apply text-2xl font-semibold font-Quicksand mb-2 text-slate-400
+}
+
+[data-theme="dark"] article h2 {
+    @apply text-2xl font-semibold font-Quicksand mb-2 text-slate-300
+}
+
+article div p{
+    @apply font-Quicksand text-xl my-2
+}
+
+article div p img{
+    @apply w-80
+}
+
+pre::-webkit-scrollbar {
+    display: none;
+}
+
+pre {
+    scrollbar-width: none;
+}
+
+pre {
+    -ms-overflow-style: none;
+}
+
+pre{
+    @apply px-6 pb-6  w-full h-full rounded-b-xl overflow-x-auto text-base leading-6 relative flex flex-col-reverse;
+}
+
+article .code-block-wrapper{
+    @apply bg-slate-700 rounded-xl my-7
+}
+
+article .code-block-wrapper pre.shiki{
+    @apply pt-2
+}
+
+article .code-block-wrapper .code-header{
+    @apply flex justify-between items-center px-3 text-lg
+}
+
+article .copy-container{
+    @apply w-full bg-zinc-800 pl-5 pr-2 z-50 absolute top-0 inset-x-0 flex justify-between flex-row-reverse items-center cursor-pointer border-b-2 border-zinc-700
+}
+
+article .code-block-wrapper .code-header p{
+    @apply text-slate-300 text-sm font-medium
+}
+
+article .copy-button{
+    @apply w-8 h-8  text-slate-300 flex justify-end items-center gap-x-1
+}

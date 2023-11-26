@@ -7,26 +7,19 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Topics</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
+            <ul tabindex="0"
+                class="menu menu-sm flex flex-col dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                @livewire('menu')
+                @livewire('theme')
             </ul>
         </div>
-        <a href="/" class="btn btn-ghost text-3xl font-righteous text-white">
+        <a href="/" id="logo"
+            class="btn sunset:text-hijau bg-transparent border-transparent hover:bg-transparent hover:border-transparent text-3xl font-righteous text-white">
             <img src="{{ asset('logo.png') }}" class="w-12 h-12" alt="Panda">Panda
             Koding</a>
     </div>
     <div class="navbar-center hidden lg:flex">
-        <ul class="menu text-white menu-horizontal px-1">
-            <li><a class="hover:text-pink" href="{{ route('article') }}"><i class="fa-regular fa-newspaper"></i>
-                    Article</a></li>
-            <li><a class="hover:text-pink" href="{{ route('topic') }}"><i class="fa-solid fa-tags"></i> Topics</a>
-            </li>
-            <li>
-                <a class="hover:text-pink" href="{{ route('topic') }}"><i class="fa-solid fa-bookmark"></i> Bookmark</a>
-            </li>
-        </ul>
+        @livewire('menu')
     </div>
     <div class="navbar-end xl:inline-flex mr-3 gap-x-2 hidden">
         <div class="dropdown dropdown-end">
@@ -48,35 +41,24 @@
             </label>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
-                    <a class="justify-between">
-                        Profile
+                    <a class="flex items-center gap-x-2">
+                        <i class="fa-regular fa-user"></i> Profile
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('myarticle.index') }}" class="justify-between">
-                        MyArticle
+                    <a href="{{ url('/dashboard/articles') }}" class="flex items-center gap-x-2">
+                        <i class="fa-regular fa-newspaper"></i> MyArticle
                     </a>
                 </li>
-                <li><a>Settings</a></li>
-                <li><a href="{{ route('logout') }}">Logout</a></li>
+                <li><a class="flex items-center gap-x-2"> <i class="fa-solid fa-sliders"></i>Settings</a></li>
+                @livewire('theme')
+                <li><a href="{{ route('logout') }}" class="flex items-center gap-x-2"> <i
+                            class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
             </ul>
         </div>
         @else
-        <a href="{{ route('login') }}" class="btn btn-sm">Login</a>
+        <a href="{{ route('login') }}" class="btn btn-login btn-sm">Login</a>
         @endif
 
     </div>
 </div>
-@push('scripts')
-<script>
-    const theme = document.querySelector('html')
-    const themeName = localStorage.getItem('theme')
-    theme.setAttribute('data-theme', themeName)
-
-    function selectTheme(themeName) {
-        localStorage.setItem('theme', themeName)
-        theme.setAttribute('data-theme', themeName)
-    }
-
-</script>
-@endpush
