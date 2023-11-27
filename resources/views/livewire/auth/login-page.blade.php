@@ -38,7 +38,7 @@
                 <a href="{{ url('auth/google') }}" class="btn btn-base-500 btn-circle">
                     <iconify-icon class="text-3xl" icon="logos:google-icon"></iconify-icon>
                 </a>
-                <a href="" class="btn btn-base-500 btn-circle">
+                <a href="{{ url('auth/facebook') }}" class="btn btn-base-500 btn-circle">
                     <iconify-icon class="text-3xl" icon="logos:facebook"></iconify-icon>
                 </a>
                 <a href="" class="btn btn-base-500 btn-circle">
