@@ -75,4 +75,9 @@ class User extends Authenticatable implements FilamentUser
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function bookmark()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
 }

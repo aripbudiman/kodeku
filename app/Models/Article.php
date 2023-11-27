@@ -42,4 +42,9 @@ class Article extends Model
     {
         return parent::getEloquentQuery()->where('author_id', Auth::id());
     }
+
+    public function bookmark()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
 }

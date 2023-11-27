@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 use App\Models\Article;
+use App\Models\Bookmark;
 use Livewire\Component;
 
 class HomePage extends Component
@@ -9,15 +10,17 @@ class HomePage extends Component
     public $data;
     public $keyword='';
     public $count=0;
+    public $bookmark;
     public function mount()
     {
-        $this->data = \App\Models\Article::with('topics','user')->latest('published')
+        $this->data = \App\Models\Article::with('topics','user','bookmark.user')->latest('published')
         ->published()
-        ->get(); 
+        ->get();
+        $this->bookmark=Bookmark::where('user_id',auth()->user()->id)->with('article','article.user')->limit(4)->get();
     }
     public function render()
     {
-        return view('livewire.home-page',['articles' => $this->filterData()]);
+        return view('livewire.home-page',['articles' => $this->filterData(),'bookmarks'=>$this->bookmark]);
     }
 
     public function filterData()
@@ -31,4 +34,5 @@ class HomePage extends Component
 
         return $filteredData;
     }
+
 }

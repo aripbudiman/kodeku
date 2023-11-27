@@ -30,3 +30,4 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/login',\App\Livewire\Auth\LoginPage::class)->name('login');
 });
 Route::get('/logout',[\App\Http\Controllers\Auth\LoginController::class,'logout'])->name('logout');
+Route::get('/bookmark',\App\Livewire\Bookmark\ListBookmark::class)->name('bookmark');

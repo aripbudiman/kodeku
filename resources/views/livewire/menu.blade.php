@@ -4,6 +4,6 @@
     <li><a class="hover:text-pink" href="{{ route('topic') }}"><i class="fa-solid fa-tags"></i> Topics</a>
     </li>
     <li>
-        <a class="hover:text-pink" href="{{ route('topic') }}"><i class="fa-solid fa-bookmark"></i> Bookmark</a>
+        <a class="hover:text-pink" href="{{ route('bookmark') }}"><i class="fa-solid fa-bookmark"></i> Bookmark</a>
     </li>
 </ul>
