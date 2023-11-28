@@ -22,12 +22,14 @@ Route::get('/', HomePage::class)->name('home-page');
 Route::get('/topic', App\Livewire\Topic\Topic::class)->name('topic');
 Route::get('/artikel', ListArticle::class)->name('article');
 Route::get('/artikel/{slug}', SingleArticle::class)->name('single-article');
-Route::get('/auth/{provider}',[App\Http\Controllers\SocialController::class,'redirect'])->name('auth.provider');
-Route::get('/auth/{provider}/callback',[App\Http\Controllers\SocialController::class,'callback'])->name('auth.provider.callback');
 Route::get('/myarticle', App\Livewire\MyArticle\Index::class)->name('myarticle.index');
 Route::get('/myarticle/create', App\Livewire\MyArticle\CreateArticle::class)->name('myarticle.create');
+Route::get('/logout',[\App\Http\Controllers\Auth\LoginController::class,'logout'])->name('logout');
+Route::get('/bookmark',\App\Livewire\Bookmark\ListBookmark::class)->name('bookmark');
+
 Route::middleware(['guest'])->group(function () {
     Route::get('/login',\App\Livewire\Auth\LoginPage::class)->name('login');
 });
-Route::get('/logout',[\App\Http\Controllers\Auth\LoginController::class,'logout'])->name('logout');
-Route::get('/bookmark',\App\Livewire\Bookmark\ListBookmark::class)->name('bookmark');
+
+Route::get('/auth/{provider}',[App\Http\Controllers\SocialController::class,'redirect'])->name('auth.provider');
+Route::get('/auth/{provider}/callback',[App\Http\Controllers\SocialController::class,'callback'])->name('auth.provider.callback');

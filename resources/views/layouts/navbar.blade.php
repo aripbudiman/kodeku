@@ -50,3 +50,16 @@
 
     </div>
 </div>
+@push('scripts')
+<script>
+    const theme = document.querySelector('html')
+    const themeName = localStorage.getItem('theme')
+    theme.setAttribute('data-theme', themeName)
+
+    function selectTheme(themeName) {
+        localStorage.setItem('theme', themeName)
+        theme.setAttribute('data-theme', themeName)
+    }
+
+</script>
+@endpush

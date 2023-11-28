@@ -54,7 +54,6 @@ export default {
         "dim",
         "nord",
         "sunset",],
-        darkTheme: "cyberpunk",
     },
     plugins: [require("daisyui")]
 }
