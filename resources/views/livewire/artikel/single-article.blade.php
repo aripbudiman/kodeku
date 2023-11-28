@@ -50,26 +50,12 @@
 </script>
 @endpush
 <div class="pt-16 ">
-
     <div></div>
     <article class="w-full xl:max-w-2xl mx-auto">
         <h1 class="text-3xl font-bold font-righteous mb-7">Daftar Isi:</h1>
         <x-markdown>
             {!! $article->content !!}</>
         </x-markdown>
-        <div id="disqus_thread"></div>
-        <script>
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document,
-                    s = d.createElement('script');
-                s.src = 'https://pandakoding-com.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-                Disqus.</a></noscript>
     </article>
     <div></div>
 </div>
