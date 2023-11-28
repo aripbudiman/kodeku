@@ -7,15 +7,15 @@ article{
 ul.table-of-contents {
     @apply list-disc list-inside mb-10;
 }
-ul li::marker {
+article ul li::marker {
     @apply text-red-500 text-xl;
     content: '#'
 }
-[data-theme="sunset"] ul li::marker {
+[data-theme="sunset"] article ul li::marker {
     @apply text-pink text-xl;
     content: '#'
 }
-[data-theme="dark"] ul li::marker {
+[data-theme="dark"] article ul li::marker {
     @apply text-hijau;
     content: '#'
 }

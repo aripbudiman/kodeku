@@ -32,6 +32,38 @@
         </main>
         @if (url()->current() !== route('login'))
         @include('layouts.footer')
+        <ul class="flex justify-between bg-base-200 fixed  xl:hidden bottom-0 inset-x-0 py-3 px-5">
+            <li>
+                <a class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="text-xs">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('article') }}" class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span class="text-xs">Article</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('topic') }}" class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-tags"></i>
+                    <span class="text-xs">Topic</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('bookmark') }}" class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-tags"></i>
+                    <span class="text-xs">Bookmark</span>
+                </a>
+            </li>
+            <li>
+                <a class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="text-xs">Profile</span>
+                </a>
+            </li>
+        </ul>
         @endif
     </div>
     @stack('scripts')

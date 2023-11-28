@@ -16,7 +16,6 @@ class HomePage extends Component
         $this->data = \App\Models\Article::with('topics','user','bookmark.user')->latest('published')
         ->published()
         ->get();
-        $this->bookmark=Bookmark::where('user_id',auth()->user()->id)->with('article','article.user')->limit(4)->get();
     }
     public function render()
     {
